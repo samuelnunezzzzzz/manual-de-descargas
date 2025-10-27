@@ -76,13 +76,13 @@ La base de datos **optialmologic_clinic** incluye las siguientes tablas:
 
 Para configurar correctamente el entorno del **frontend**, asegúrate de estar dentro de la carpeta `/frontend` del proyecto antes de ejecutar los comandos.
 
-### 🧩 1. React 19
+###  1. React 19
 Librería principal para construir la interfaz de usuario.
 
 ```bash
 npm install react react-dom
 
-## ⚡ 2. Vite 7 
+###  Vite 7 
 
 Entorno de desarrollo rápido y moderno que reemplaza a Create React App.
 ```bash
@@ -90,30 +90,30 @@ Entorno de desarrollo rápido y moderno que reemplaza a Create React App.
 
 - Selecciona React y JavaScript cuando te lo pregunte.
 
-## 🎨 3. TailwindCSS 4
+##  TailwindCSS 4
 ```bash
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
-#🧭 4. React Router DOM 7
+# React Router DOM 7
 ```bash
 npm install react-router-dom
 
-## 🖼️ 6. Lucide React
+##  Lucide React
 
 -   Iconografía moderna y ligera.
 ```bash
 npm install lucide-react
 
 
-#🧹 7. ESLint
+#  ESLint
 -Herramienta para mantener el código limpio y detectar errores.
 ```bash
 npm install eslint --save-dev
 npx eslint --init
 
 
-## 🐍 Backend (Lógica y Base de Datos)
+##  Backend (Lógica y Base de Datos)
 
 El backend del proyecto **Optialmologic Clinic** está desarrollado con **Python 3**, encargado de manejar la lógica del sistema, la conexión con la base de datos y la autenticación de los usuarios.
 
@@ -121,7 +121,7 @@ A continuación se explican las dependencias principales y cómo instalarlas y e
 
 ---
 
-### 🐍 1. Python 3
+###  Python 3
 Lenguaje de programación utilizado para la capa lógica y la conexión con el servidor de base de datos.
 
 > Python permite crear APIs seguras, rápidas y fáciles de mantener que gestionan las operaciones del sistema como citas, pacientes y médicos.
@@ -131,25 +131,53 @@ Verifica que esté instalado con:
 ```bash
 python --version
 
-## 💾 2. MySQL Connector
+##   MySQL Connector
 -Librería oficial que permite conectar Python con una base de datos MySQL.
 ```bash
 python -m pip install mysql-connector-python
 
 - Esta dependencia permite a la aplicación conectarse con la base de datos donde se almacenan los pacientes, médicos y citas.
 
-##🔐 3. PyJWT (JSON Web Tokens)
+##  PyJWT (JSON Web Tokens)
 
 - Instalación:
 ```bash
   pip install pyjwt
+
+
+  ---
+
+## 🗄️ Configuración y descarga de la base de datos MySQL
+
+La base de datos es una parte fundamental del proyecto **Optialmologic Clinic**, ya que almacena toda la información relacionada con los **pacientes**, **médicos**, **citas** y **registros clínicos**.
+
+A continuación se explican los pasos para **instalar MySQL**, **crear la base de datos** y **descargarla o importarla** en tu entorno local.
+
+---
+
+### 🔽 1. Instalar MySQL Server
+
+Descarga e instala MySQL desde la página oficial:
+
+👉 [https://dev.mysql.com/downloads/mysql](https://dev.mysql.com/downloads/mysql)
+
+Durante la instalación:
+- Anota tu usuario (por defecto: `root`)
+- Define una contraseña segura
+- Habilita MySQL como servicio (para que se inicie automáticamente)
+
+Una vez instalado, puedes abrir la **consola de MySQL** escribiendo en tu terminal:
+
+```bash
+mysql -u root -p
+
 
 ### Relaciones:
 - Un **médico** puede tener **muchas citas**.
 - Un **paciente** puede tener **varias citas**.
 
 
-## 📈 Futuras mejoras
+##  Futuras mejoras
 
 - Integrar sistema de notificaciones por correo.  
 - Añadir control de roles (Administrador / Médico / Paciente).  
@@ -157,7 +185,7 @@ python -m pip install mysql-connector-python
 - Conectar con API de WhatsApp para recordatorios automáticos.  
 ---
 
-### 🧩 1. Instalar dependencias de Node.js (Frontend)
+###   Instalar dependencias de Node.js (Frontend)
 
 Ejecuta el siguiente comando dentro de la carpeta del proyecto:
 
