@@ -1,5 +1,7 @@
 # 🏥 Optialmologic Clinic
 
+# 🏥 Optialmologic Clinic
+
 **Optialmologic Clinic** es un proyecto formativo enfocado en el desarrollo de una aplicación web moderna para una **clínica oftalmológica**.  
 Su objetivo es optimizar la gestión de pacientes, citas médicas y registros clínicos mediante herramientas tecnológicas modernas y de código abierto.
 
@@ -60,76 +62,43 @@ Nuestro compromiso es seguir creciendo con ética, transparencia y responsabilid
 Para ejecutar correctamente el proyecto **Optialmologic Clinic**, es necesario instalar las dependencias tanto del **frontend (React + Vite)** como del **backend (Python + MySQL)**.  
 A continuación se explica paso a paso cómo hacerlo y qué función cumple cada dependencia.
 
+# 🧮 3. Base de datos en MySQL
+
+El sistema utiliza MySQL como base de datos principal.
+A continuación se muestra una estructura básica de tablas:
+
+- CREATE DATABASE optialmologic_clinic;
+
+USE optialmologic_clinic;
+
+CREATE TABLE pacientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100),
+    correo VARCHAR(100),
+    telefono VARCHAR(20),
+    fecha_nacimiento DATE
+);
+
+CREATE TABLE medicos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100),
+    especialidad VARCHAR(100),
+    telefono VARCHAR(20)
+);
+
+CREATE TABLE citas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_paciente INT,
+    id_medico INT,
+    fecha DATE,
+    hora TIME,
+    estado VARCHAR(50),
+    FOREIGN KEY (id_paciente) REFERENCES pacientes(id),
+    FOREIGN KEY (id_medico) REFERENCES medicos(id)
+);
+
+
 ---
-
-
-
-## base de datos en MySQL
-pacientes → datos del paciente
-
-medicos → información del médico
-
-citas → relación entre ambos
-
-# 🐍 2. Conectar Python al MySQL
-
-import mysql.connector
-
-# Conexión a la base de datos
-conexion = mysql.connector.connect(
-    host="localhost",
-    user="root",        # tu usuario de MySQL
-    password="tu_contraseña",  # cambia esto
-    database="optialmologic_clinic"
-)
-
-# Verificar conexión
-if conexion.is_connected():
-    print("✅ Conexión exitosa a la base de datos MySQL")
-
-cursor = conexion.cursor()
-cursor.execute("SHOW TABLES")
-for tabla in cursor:
-    print("📦", tabla)
-
-conexion.close()
-
-
-# ⚙️ 3. Usar la base de datos en tu aplicación
-
-import mysql.connector
-
-conexion = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="tu_contraseña",
-    database="optialmologic_clinic"
-)
-
-cursor = conexion.cursor()
-
-# Insertar un nuevo paciente
-sql = "INSERT INTO pacientes (nombre, correo, telefono, fecha_nacimiento) VALUES (%s, %s, %s, %s)"
-valores = ("Samuel García", "samuel@example.com", "3104567890", "2001-09-20")
-
-cursor.execute(sql, valores)
-conexion.commit()
-
-print("✅ Paciente agregado correctamente con ID:", cursor.lastrowid)
-
-conexion.close()
-
-# 📁 5. Conexión con el Frontend
-
-// frontend/src/api/pacientes.js
-export async function obtenerPacientes() {
-  const response = await fetch("http://localhost:5000/pacientes");
-  const data = await response.json();
-  return data;
-}
-
-
-
 
 ### 🧩 1. Instalar dependencias de Node.js (Frontend)
 
