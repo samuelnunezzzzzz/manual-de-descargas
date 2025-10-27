@@ -64,8 +64,7 @@ Sigue estos pasos para instalar y ejecutar el proyecto en tu entorno local.
 
 ## 📦 Dependencias incluidas
 
-{
-  "dependencies": {
+- "dependencies": 
     "lucide-react": "^0.542.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
@@ -73,8 +72,8 @@ Sigue estos pasos para instalar y ejecutar el proyecto en tu entorno local.
     "react-router-dom": "^7.9.1",
     "mysql-connector-python": "python",
     "pyjwt": "python"
-  },
-  "devDependencies": {
+
+- "devDependencies": 
     "@eslint/js": "^9.33.0",
     "@tailwindcss/cli": "^4.1.12",
     "@tailwindcss/postcss": "^4.1.12",
@@ -89,9 +88,6 @@ Sigue estos pasos para instalar y ejecutar el proyecto en tu entorno local.
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.14",
     "vite": "^7.1.2"
-  }
-}
-
 
 
 ### 🔹 1. Clonar el repositorio
