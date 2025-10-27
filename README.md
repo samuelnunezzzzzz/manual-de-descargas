@@ -62,32 +62,19 @@ Sigue estos pasos para instalar y ejecutar el proyecto en tu entorno local.
 ## Iniciar el servidor de desarrollo
 - npm run dev
 
-## 📦 Dependencias incluidas
 
-- "dependencies": 
-    "lucide-react": "^0.542.0",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "react-magic-motion": "^1.1.2",
-    "react-router-dom": "^7.9.1",
-    "mysql-connector-python": "python",
-    "pyjwt": "python"
+## 📦 Dependencias principales
 
-- "devDependencies": 
-    "@eslint/js": "^9.33.0",
-    "@tailwindcss/cli": "^4.1.12",
-    "@tailwindcss/postcss": "^4.1.12",
-    "@types/react": "^19.1.10",
-    "@types/react-dom": "^19.1.7",
-    "@vitejs/plugin-react": "^5.1.0",
-    "autoprefixer": "^10.4.21",
-    "eslint": "^9.33.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "globals": "^16.3.0",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.14",
-    "vite": "^7.1.2"
+Estas son las dependencias usadas por el proyecto:
+
+```json
+"dependencies": {
+  "lucide-react": "^0.542.0",
+  "react": "^19.1.1",
+  "react-dom": "^19.1.1",
+  "react-magic-motion": "^1.1.2",
+  "react-router-dom": "^7.9.1"
+}
 
 
 ### 🔹 1. Clonar el repositorio
