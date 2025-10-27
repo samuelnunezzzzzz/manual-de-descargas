@@ -45,9 +45,12 @@ El proyecto permite:
 ---
 {
   "name": "ophthalmology_clinic",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "description": "Aplicación web para la gestión de citas y pacientes en una clínica oftalmológica.",
+  "author": "Samuel Núñez y Valery Martínez",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -76,11 +79,17 @@ El proyecto permite:
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.14",
     "vite": "^7.1.2"
-
-    python -m pip install mysql-connector-python
-    pip install pyjwt
-  }
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "tailwindcss",
+    "clinic",
+    "oftalmología",
+    "frontend"
+  ]
 }
+
 ### ⚙️ Instalación
 
 1. Instala las dependencias de Node:
