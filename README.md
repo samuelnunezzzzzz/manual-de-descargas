@@ -19,30 +19,25 @@ El proyecto permite:
 
 ## 🧠 Tecnologías utilizadas
 
-- **HTML5** – estructura del sitio.  
-- **CSS3** – diseño y estilos.  
-- **JavaScript** – interactividad y validaciones.  
-- **Visual Studio Code** – entorno de desarrollo.  
-- **Git y GitHub** – control de versiones.  
+- ⚛️ **React 19** – Librería principal para construir la interfaz.  
+- ⚡ **Vite 7** – Entorno rápido de desarrollo.  
+- 🎨 **TailwindCSS 4** – Framework CSS para diseño responsivo y moderno.  
+- 🧭 **React Router DOM 7** – Manejo de rutas y navegación.  
+- 🪄 **React Magic Motion** – Animaciones suaves y fluidas.  
+- 🧩 **Lucide React** – Iconografía moderna y ligera.  
+- 🧹 **ESLint** – Linter para mantener el código limpio.  
 
 ---
 
-## 🧭 Requisitos previos
+## 📦 Dependencias principales
 
-Antes de comenzar, asegúrate de tener instalado:
+Estas son las dependencias usadas por el proyecto:
 
-- [Git](https://git-scm.com/downloads)
-- [Visual Studio Code](https://code.visualstudio.com/)
-- Un navegador web (Google Chrome, Edge, Firefox)
-
----
-
-## 📥 Descarga del proyecto
-
-### 🔹 Opción 1: Clonar el repositorio con Git
-
-1. Abre la terminal o **Git Bash**.  
-2. Escribe el siguiente comando:
-
-   ```bash
-   git clone https://github.com/valejmartzz/OptialmologicClinic.git
+```json
+"dependencies": {
+  "lucide-react": "^0.542.0",
+  "react": "^19.1.1",
+  "react-dom": "^19.1.1",
+  "react-magic-motion": "^1.1.2",
+  "react-router-dom": "^7.9.1"
+}
