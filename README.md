@@ -62,42 +62,25 @@ Nuestro compromiso es seguir creciendo con ética, transparencia y responsabilid
 Para ejecutar correctamente el proyecto **Optialmologic Clinic**, es necesario instalar las dependencias tanto del **frontend (React + Vite)** como del **backend (Python + MySQL)**.  
 A continuación se explica paso a paso cómo hacerlo y qué función cumple cada dependencia.
 
-# 🧮 3. Base de datos en MySQL
+## 🧱 Modelo de Base de Datos
 
-El sistema utiliza MySQL como base de datos principal.
-A continuación se muestra una estructura básica de tablas:
+La base de datos **optialmologic_clinic** incluye las siguientes tablas:
 
-- CREATE DATABASE optialmologic_clinic;
+- **pacientes:** almacena la información personal de cada paciente.  
+- **medicos:** contiene los datos de los profesionales de la clínica.  
+- **citas:** relaciona pacientes con médicos, con fecha y hora de atención.  
 
-USE optialmologic_clinic;
-
-CREATE TABLE pacientes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(100),
-    correo VARCHAR(100),
-    telefono VARCHAR(20),
-    fecha_nacimiento DATE
-);
-
-CREATE TABLE medicos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(100),
-    especialidad VARCHAR(100),
-    telefono VARCHAR(20)
-);
-
-CREATE TABLE citas (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    id_paciente INT,
-    id_medico INT,
-    fecha DATE,
-    hora TIME,
-    estado VARCHAR(50),
-    FOREIGN KEY (id_paciente) REFERENCES pacientes(id),
-    FOREIGN KEY (id_medico) REFERENCES medicos(id)
-);
+### Relaciones:
+- Un **médico** puede tener **muchas citas**.
+- Un **paciente** puede tener **varias citas**.
 
 
+## 📈 Futuras mejoras
+
+- Integrar sistema de notificaciones por correo.  
+- Añadir control de roles (Administrador / Médico / Paciente).  
+- Implementar recuperación de contraseña.  
+- Conectar con API de WhatsApp para recordatorios automáticos.  
 ---
 
 ### 🧩 1. Instalar dependencias de Node.js (Frontend)
