@@ -176,6 +176,13 @@ mysql -u root -p
 - Un **médico** puede tener **muchas citas**.
 - Un **paciente** puede tener **varias citas**.
 
+frontend 
+
+npm run dev 
+
+Backend
+ uvicorn main:app --reload --port 8000
+
 
 ##  Futuras mejoras
 
