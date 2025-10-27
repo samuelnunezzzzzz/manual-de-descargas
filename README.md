@@ -62,6 +62,75 @@ A continuación se explica paso a paso cómo hacerlo y qué función cumple cada
 
 ---
 
+
+
+## base de datos en MySQL
+pacientes → datos del paciente
+
+medicos → información del médico
+
+citas → relación entre ambos
+
+# 🐍 2. Conectar Python al MySQL
+
+import mysql.connector
+
+# Conexión a la base de datos
+conexion = mysql.connector.connect(
+    host="localhost",
+    user="root",        # tu usuario de MySQL
+    password="tu_contraseña",  # cambia esto
+    database="optialmologic_clinic"
+)
+
+# Verificar conexión
+if conexion.is_connected():
+    print("✅ Conexión exitosa a la base de datos MySQL")
+
+cursor = conexion.cursor()
+cursor.execute("SHOW TABLES")
+for tabla in cursor:
+    print("📦", tabla)
+
+conexion.close()
+
+
+# ⚙️ 3. Usar la base de datos en tu aplicación
+
+import mysql.connector
+
+conexion = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="tu_contraseña",
+    database="optialmologic_clinic"
+)
+
+cursor = conexion.cursor()
+
+# Insertar un nuevo paciente
+sql = "INSERT INTO pacientes (nombre, correo, telefono, fecha_nacimiento) VALUES (%s, %s, %s, %s)"
+valores = ("Samuel García", "samuel@example.com", "3104567890", "2001-09-20")
+
+cursor.execute(sql, valores)
+conexion.commit()
+
+print("✅ Paciente agregado correctamente con ID:", cursor.lastrowid)
+
+conexion.close()
+
+# 📁 5. Conexión con el Frontend
+
+// frontend/src/api/pacientes.js
+export async function obtenerPacientes() {
+  const response = await fetch("http://localhost:5000/pacientes");
+  const data = await response.json();
+  return data;
+}
+
+
+
+
 ### 🧩 1. Instalar dependencias de Node.js (Frontend)
 
 Ejecuta el siguiente comando dentro de la carpeta del proyecto:
