@@ -29,15 +29,23 @@ El proyecto permite:
 
 ---
 
-## 📦 Dependencias principales
+### 🧩 Dependencias principales
 
-Estas son las dependencias usadas por el proyecto:
+**Frontend (React):**
+- React, React DOM, React Router DOM  
+- Tailwind CSS para estilos  
+- Lucide React (iconos)  
+- React Magic Motion (animaciones)  
+- Vite (entorno de desarrollo rápido)
 
-```json
-"dependencies": {
-  "lucide-react": "^0.542.0",
-  "react": "^19.1.1",
-  "react-dom": "^19.1.1",
-  "react-magic-motion": "^1.1.2",
-  "react-router-dom": "^7.9.1"
-}
+**Backend (Python):**
+- `mysql-connector-python`: para conectar con bases de datos MySQL.  
+- `pyjwt`: para manejo de tokens de autenticación (JSON Web Tokens).
+
+---
+
+### ⚙️ Instalación
+
+1. Instala las dependencias de Node:
+   ```bash
+   npm install
